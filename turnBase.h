@@ -25,7 +25,8 @@ adrNode buildWarriorTree();
 adrNode buildArcherTree();
 adrNode buildMageTree();
 void displaySkill(adrNode root);
-
+adrNode searchSkill(adrNode root, string namaSkill);
 
 
 #endif // TURNBASE_H_INCLUDED
+
