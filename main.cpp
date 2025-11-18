@@ -1,4 +1,4 @@
-// Duely Tactics Turn-Based Combat dengan Skill dan Aksi
+// Arcpath Turn-Based Combat dengan Skill dan Aksi
 #include <iostream>
 #include "turnBase.h"
 using namespace std;
@@ -48,3 +48,4 @@ int main()
 
     return 0;
 }
+
