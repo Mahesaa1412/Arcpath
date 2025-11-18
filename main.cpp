@@ -12,12 +12,10 @@ int main()
     createTree(root);
 
 //USER PILIH ROLE
-    cout << "Pilih Role:\n";
-    cout << "1. Warrior\n2. Archer\n3. Mage\n";
-    cout << "Masukkan pilihan (1-3): ";
-    cin >> choice;
+    displayPilihRole(); // tampilan pilih role
+    cin >> choice; //insert pilihan ada 1 2 3
 
-    selectedTree = pilihRoleTree(choice);
+    selectedTree = pilihRoleTree(choice); // switch case antara role
     if (selectedTree == nullptr){
         return 0;
     }
