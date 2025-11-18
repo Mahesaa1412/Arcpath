@@ -17,5 +17,15 @@ struct skillNode {
     adrNode right;
 };
 
+void createTree(adrNode &root);
+adrNode createNode(string namaSkill, int damage, int staminaCost);
+void insertNode(adrNode &root, adrNode p);
+void insertSkill(adrNode &root, string namaSkill, int damage, int staminaCost);
+adrNode buildWarriorTree();
+adrNode buildArcherTree();
+adrNode buildMageTree();
+void displaySkill(adrNode root);
+
+
 
 #endif // TURNBASE_H_INCLUDED
