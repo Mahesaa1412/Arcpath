@@ -108,7 +108,3 @@ g++ main.cpp skilltree.cpp inventory.cpp -o game
 Fork, submit issues, atau buat pull request! Proyek ini cocok sebagai contoh implementasi struktur data dalam game.
 
 ---
-
-## 📜 License
-
-MIT License
