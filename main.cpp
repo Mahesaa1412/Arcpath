@@ -17,22 +17,9 @@ int main()
     cout << "Masukkan pilihan (1-3): ";
     cin >> choice;
 
-    switch(choice){
-        case 1:
-            cout << "\n=== Warrior Skill Tree ===\n";
-            selectedTree = buildWarriorTree();
-            break;
-        case 2:
-            cout << "\n=== Archer Skill Tree ===\n";
-            selectedTree = buildArcherTree();
-            break;
-        case 3:
-            cout << "\n=== Mage Skill Tree ===\n";
-            selectedTree = buildMageTree();
-            break;
-        default:
-            cout << "Pilihan tidak valid!\n";
-            return 0;
+    selectedTree = pilihRoleTree(choice);
+    if (selectedTree == nullptr){
+        return 0;
     }
 
 //MASUK KE LIST SKILL
@@ -43,7 +30,8 @@ int main()
     string userPilihNamaSkill;
     adrNode ketemu;
 
-    cout << "Pilih Skill: \n";
+    cout << endl;
+    cout << "Pilih Skill: ";
     cin >> userPilihNamaSkill;
     ketemu = searchSkill(selectedTree, userPilihNamaSkill);
 
