@@ -2,6 +2,35 @@
 #include "turnBase.h"
 using namespace std;
 
+void displayPilihRole(){
+    cout << "===================================\n";
+    cout << "   <<  -- PILIH ROLE ANDA -- >>\n";
+    cout << "===================================\n";
+    cout << endl;
+    cout << "----------------(1)---------------\n";
+    cout << "              WARRIOR\n";
+    cout << endl;
+    cout << "       Bersifat kuat, tebal,\n";
+    cout << "    dan ahli dalam pertarungan\n";
+    cout << "            jarak dekat" << "\n\n";
+
+    cout << "----------------(2)---------------\n";
+    cout << "              ARCHER\n";
+    cout << endl;
+    cout << "    Cepat, presisi tinggi, dan\n";
+    cout << " mematikan dalam serangan jarak jauh" << "\n\n";
+
+    cout << "----------------(3)---------------\n";
+    cout << "               MAGE\n";
+    cout << endl;
+    cout << "    Menguasai sihir elemen dan\n";
+    cout << "    menghancurkan musuh dengan\n";
+    cout << "       kekuatan mistis besar" << "\n\n";
+
+    cout << "===================================\n";
+    cout << ">> PILIH ROLE ANDA (1-3): ";
+}
+
 void createTree(adrNode &root){
     root = nullptr;
 }
@@ -113,4 +142,5 @@ adrNode searchSkill(adrNode root, string namaSkill){
 
     return searchSkill(root->right, namaSkill);
 }
+
 
