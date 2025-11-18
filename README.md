@@ -1,5 +1,5 @@
 # Arcpath
-# 🎮 Turn-Based RPG CLI Game
+# Turn-Based RPG CLI Game
 
 **C++ | Tree + Multi-Linked List (MLL)**
 
@@ -103,8 +103,8 @@ g++ main.cpp skilltree.cpp inventory.cpp -o game
 
 ---
 
-## 🤝 Contributions
+## Authors
+Project ini dibuat secara berkelompok oleh 2 anggota yang berkontribusi:
 
-Fork, submit issues, atau buat pull request! Proyek ini cocok sebagai contoh implementasi struktur data dalam game.
-
----
+- [@nisissy](https://github.com/nississy) - Anisah Pulungan
+- [@Mahesaa1412](https://github.com/Mahesaa1412) - Dimas Tri Mahesa
