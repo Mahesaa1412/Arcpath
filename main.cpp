@@ -11,6 +11,7 @@ int main()
 
     createTree(root);
 
+//USER PILIH ROLE
     cout << "Pilih Role:\n";
     cout << "1. Warrior\n2. Archer\n3. Mage\n";
     cout << "Masukkan pilihan (1-3): ";
@@ -34,9 +35,28 @@ int main()
             return 0;
     }
 
+//MASUK KE LIST SKILL
+//USER PILIH SKILL
     cout << "\nSkill List:\n";
     displaySkill(selectedTree);
 
+    string userPilihNamaSkill;
+    adrNode ketemu;
+
+    cout << "Pilih Skill: \n";
+    cin >> userPilihNamaSkill;
+    ketemu = searchSkill(selectedTree, userPilihNamaSkill);
+
+    if(ketemu != nullptr){
+        cout << "\nSkill ditemukan!\n";
+        cout << "Nama: " << ketemu->info.namaSkill << endl;
+        cout << "Damage: " << ketemu->info.damage << endl;
+        cout << "Stamina: " << ketemu->info.staminaCost << endl;
+    } else {
+        cout << "Skill tidak ditemukan!\n";
+    }
+
+//USER PILIH ANTARA INGIN MENGGUNAKAN SKILL ATAU TIDAK
+
     return 0;
 }
-
