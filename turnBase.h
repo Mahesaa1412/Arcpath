@@ -17,6 +17,7 @@ struct skillNode {
     adrNode right;
 };
 
+void displayPilihRole();
 void createTree(adrNode &root);
 adrNode createNode(string namaSkill, int damage, int staminaCost);
 void insertNode(adrNode &root, adrNode p);
@@ -30,5 +31,6 @@ adrNode searchSkill(adrNode root, string namaSkill);
 
 
 #endif // TURNBASE_H_INCLUDED
+
 
 
