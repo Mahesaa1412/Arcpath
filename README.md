@@ -7,9 +7,9 @@ Game RPG berbasis CLI yang mengimplementasikan **struktur data Tree** untuk Skil
 
 ---
 
-## 📘 Project Description
+## Project Description
 
-**Turn-Based RPG CLI Game** adalah proyek game berbasis Command Line Interface yang dibangun menggunakan C++. Proyek ini dirancang untuk mendemonstrasikan implementasi struktur data **Tree (Left Child–Right Sibling)** dan **Multi Linked List (1-N)** melalui sistem skill tree dan inventory.
+**Arcpath** adalah proyek game berbasis Command Line Interface yang dibangun menggunakan C++. Proyek ini dirancang untuk mendemonstrasikan implementasi struktur data **Tree (Left Child–Right Sibling)** dan **Multi Linked List (1-N)** melalui sistem skill tree dan inventory.
 
 Game ini memberikan pengalaman bermain sederhana namun interaktif, di mana pemain dapat memilih role, melihat skill tree, mencari skill, dan mengelola inventory.
 
@@ -88,18 +88,6 @@ g++ main.cpp skilltree.cpp inventory.cpp -o game
 ```
 ./game
 ```
-
----
-
-## 🔍 Todo / Future Improvements
-
-* [ ] Turn-based battle system
-* [ ] Enemy AI
-* [ ] Skill cooldown system
-* [ ] EXP & leveling
-* [ ] Equipment system (DLL)
-* [ ] Save/Load game
-* [ ] ASCII UI enhancement
 
 ---
 
