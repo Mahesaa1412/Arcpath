@@ -35,10 +35,10 @@ adrNode buildWarriorTree(){
     adrNode root = nullptr;
 
     insertSkill(root, "Slash", 20, 10);
-    insertSkill(root, "Iron Skin", 0, 5);
+    insertSkill(root, "Iron_Skin", 0, 5);
     insertSkill(root, "Bash", 30, 15);
-    insertSkill(root, "Power Strike", 40, 20);
-    insertSkill(root, "Shield Bash", 0, 8);
+    insertSkill(root, "Power_Strike", 40, 20);
+    insertSkill(root, "Shield_Bash", 0, 8);
     insertSkill(root, "Whirlwind", 50, 25);
     insertSkill(root, "Earthquake", 60, 30);
     insertSkill(root, "Curse Strike", 10, 12);
@@ -48,13 +48,13 @@ adrNode buildWarriorTree(){
 
 adrNode buildArcherTree(){
     adrNode root = nullptr;
-    insertSkill(root, "Quick Shot", 15, 5);
-    insertSkill(root, "Piercing Arrow", 25, 10);
-    insertSkill(root, "Multi Shot", 35, 15);
-    insertSkill(root, "Eagle Eye", 0, 8);
-    insertSkill(root, "Rapid Fire", 40, 20);
-    insertSkill(root, "Poison Arrow", 10, 12);
-    insertSkill(root, "Rain of Arrows", 50, 25);
+    insertSkill(root, "Quick_Shot", 15, 5);
+    insertSkill(root, "Piercing_Arrow", 25, 10);
+    insertSkill(root, "Multi_Shot", 35, 15);
+    insertSkill(root, "Eagle_Eye", 0, 8);
+    insertSkill(root, "Rapid_Fire", 40, 20);
+    insertSkill(root, "Poison_Arrow", 10, 12);
+    insertSkill(root, "Rain_of_Arrows", 50, 25);
     insertSkill(root, "Snipe", 60, 30);
     return root;
 }
@@ -62,12 +62,12 @@ adrNode buildArcherTree(){
 adrNode buildMageTree(){
     adrNode root = nullptr;
     insertSkill(root, "Fireball", 25, 10);
-    insertSkill(root, "Ice Spike", 20, 8);
-    insertSkill(root, "Lightning Bolt", 35, 15);
-    insertSkill(root, "Mana Shield", 0, 5);
+    insertSkill(root, "Ice_Spike", 20, 8);
+    insertSkill(root, "Lightning_Bolt", 35, 15);
+    insertSkill(root, "Mana_Shield", 0, 5);
     insertSkill(root, "Meteor", 50, 25);
-    insertSkill(root, "Frost Nova", 15, 12);
-    insertSkill(root, "Arcane Blast", 40, 20);
+    insertSkill(root, "Frost_Nova", 15, 12);
+    insertSkill(root, "Arcane_Blast", 40, 20);
     insertSkill(root, "Curse", 10, 18);
     return root;
 }
