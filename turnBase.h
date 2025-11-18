@@ -20,6 +20,7 @@ struct skillNode {
 void createTree(adrNode &root);
 adrNode createNode(string namaSkill, int damage, int staminaCost);
 void insertNode(adrNode &root, adrNode p);
+adrNode pilihRoleTree(int choice);
 void insertSkill(adrNode &root, string namaSkill, int damage, int staminaCost);
 adrNode buildWarriorTree();
 adrNode buildArcherTree();
@@ -29,4 +30,5 @@ adrNode searchSkill(adrNode root, string namaSkill);
 
 
 #endif // TURNBASE_H_INCLUDED
+
 
