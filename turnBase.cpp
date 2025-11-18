@@ -31,6 +31,23 @@ void insertSkill(adrNode &root, string namaSkill, int damage, int staminaCost){
     insertNode(root, createNode(namaSkill, damage, staminaCost));
 }
 
+adrNode pilihRoleTree(int choice){
+    switch(choice){
+        case 1:
+            cout << "\n=== Warrior Skill Tree ===\n";
+            return buildWarriorTree();
+        case 2:
+            cout << "\n=== Archer Skill Tree ===\n";
+            return buildArcherTree();
+        case 3:
+            cout << "\n=== Mage Skill Tree ===\n";
+            return buildMageTree();
+        default:
+            cout << "Pilihan tidak valid!\n";
+            return nullptr;
+    }
+}
+
 adrNode buildWarriorTree(){
     adrNode root = nullptr;
 
@@ -96,3 +113,4 @@ adrNode searchSkill(adrNode root, string namaSkill){
 
     return searchSkill(root->right, namaSkill);
 }
+
