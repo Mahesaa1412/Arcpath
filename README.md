@@ -1,4 +1,4 @@
-# Arcpath
+# ARCPATH
 # Turn-Based RPG CLI Game
 
 **C++ | Tree + Multi-Linked List (MLL)**
@@ -15,9 +15,9 @@ Game ini memberikan pengalaman bermain sederhana namun interaktif, di mana pemai
 
 ---
 
-## ✨ Features
+## Fitur
 
-### 🌳 Skill Tree System (Tree)
+### Skill Tree System (Tree)
 
 * Setiap role memiliki skill tree sendiri.
 * Representasi Tree menggunakan **Left Child – Right Sibling**.
@@ -28,13 +28,13 @@ Game ini memberikan pengalaman bermain sederhana namun interaktif, di mana pemai
   * `staminaCost`
 * Pencarian skill menggunakan DFS rekursif.
 
-### 📦 Inventory System (MLL)
+### Inventory System (MLL)
 
 * Inventory disusun menggunakan Multi Linked List (1-N).
 * Isi berupa berbagai jenis potion (Small, Medium, Elixir).
 * Menampilkan dan menambah item ke inventory.
 
-### 🎭 Role System
+### Role System
 
 * **Warrior** – keseimbangan kekuatan.
 * **Archer** – jarak jauh dengan skill bertingkat.
@@ -42,7 +42,7 @@ Game ini memberikan pengalaman bermain sederhana namun interaktif, di mana pemai
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 * C++
 * Tree (Left Child – Right Sibling)
@@ -71,22 +71,6 @@ Game ini memberikan pengalaman bermain sederhana namun interaktif, di mana pemai
 Slash (DMG: 10 | ST: 5)
   ├── Heavy Slash (DMG: 20 | ST: 10)
   └── Whirlwind   (DMG: 35 | ST: 18)
-```
-
----
-
-## 🧪 How To Run
-
-### Compile
-
-```
-g++ main.cpp skilltree.cpp inventory.cpp -o game
-```
-
-### Run
-
-```
-./game
 ```
 
 ---
