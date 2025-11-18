@@ -80,3 +80,19 @@ void displaySkill(adrNode root){
     }
 }
 
+adrNode searchSkill(adrNode root, string namaSkill){
+    if (root == nullptr) {
+        return nullptr;
+    }
+
+    if (root->info.namaSkill == namaSkill) {
+        return root;
+    }
+
+    adrNode leftSkill = searchSkill(root->left, namaSkill);
+    if (leftSkill != nullptr) {
+        return leftSkill;
+    }
+
+    return searchSkill(root->right, namaSkill);
+}
