@@ -20,15 +20,20 @@ int main()
         return 0;
     }
 
+
 //MASUK KE LIST SKILL
 //USER PILIH SKILL
     cout << "\nSkill List:\n";
     displaySkill(selectedTree);
 
+    cout << "POST-ORDER: ";
+    postOrder(selectedTree);
+
     string userPilihNamaSkill;
     adrNode ketemu;
 
     cout << endl;
+
     cout << "Pilih Skill: ";
     cin >> userPilihNamaSkill;
     ketemu = searchSkill(selectedTree, userPilihNamaSkill);
@@ -44,6 +49,8 @@ int main()
 
 //USER PILIH ANTARA INGIN MENGGUNAKAN SKILL ATAU TIDAK
 
+    cout << "Gunakan skill?\n";
+    cout << "[IYA] atau [TIDAK]";
     return 0;
 }
 
