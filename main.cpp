@@ -11,7 +11,7 @@ int main()
 
     createTree(root);
 
-//USER PILIH ROLE
+// USER PILIH ROLE
     displayPilihRole(); // tampilan pilih role
     cin >> choice; //insert pilihan ada 1 2 3
 
@@ -20,14 +20,14 @@ int main()
         return 0;
     }
 
-
-//MASUK KE LIST SKILL
-//USER PILIH SKILL
+// MASUK KE LIST SKILL & USER PILIH SKILL
     cout << "\nSkill List:\n";
     displaySkill(selectedTree);
 
+// CEK TREE
     cout << "POST-ORDER: ";
     postOrder(selectedTree);
+// END CHECK
 
     string userPilihNamaSkill;
     adrNode ketemu;
@@ -43,14 +43,17 @@ int main()
         cout << "Nama: " << ketemu->info.namaSkill << endl;
         cout << "Damage: " << ketemu->info.damage << endl;
         cout << "Stamina: " << ketemu->info.staminaCost << endl;
+        cout << "Mana: " << ketemu->info.mana << endl;
     } else {
         cout << "Skill tidak ditemukan!\n";
     }
 
-//USER PILIH ANTARA INGIN MENGGUNAKAN SKILL ATAU TIDAK
+// USER PILIH ANTARA INGIN MENGGUNAKAN SKILL ATAU TIDAK
 
     cout << "Gunakan skill?\n";
     cout << "[IYA] atau [TIDAK]";
+
+// ------------------ [END] UNTUK PILIH ROLE ------------------//
     return 0;
 }
 
