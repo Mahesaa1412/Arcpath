@@ -14,6 +14,7 @@ int main()
 // USER PILIH ROLE
     displayPilihRole(); // tampilan pilih role
     cin >> choice; //insert pilihan ada 1 2 3
+    cout << endl;
 
     selectedTree = pilihRoleTree(choice); // switch case antara role
     if (selectedTree == nullptr){
@@ -56,4 +57,3 @@ int main()
 // ------------------ [END] UNTUK PILIH ROLE ------------------//
     return 0;
 }
-
