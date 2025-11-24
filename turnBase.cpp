@@ -105,9 +105,15 @@ adrNode pilihRoleTree(int choice){
             cout << "\n=== Warrior Skill Tree ===\n";
             return buildWarriorTree();
         case 2:
+            cout << "Kamu menjadi Archer!"<< endl;
+            status = archerAtribut();
+            karakter(status);
             cout << "\n=== Archer Skill Tree ===\n";
             return buildArcherTree();
         case 3:
+            cout << "Kamu menjadi Mage!"<< endl;
+            status = mageAtribut();
+            karakter(status);
             cout << "\n=== Mage Skill Tree ===\n";
             return buildMageTree();
         default:
