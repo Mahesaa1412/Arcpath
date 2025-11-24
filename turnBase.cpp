@@ -35,9 +35,10 @@ void createTree(adrNode &root){
     root = nullptr;
 }
 
-adrNode createNode(string namaSkill, int damage, int staminaCost){
+adrNode createNode(int idSkill, string namaSkill, int damage, int staminaCost){
     adrNode p;
     p = new skillNode;
+    p ->info.idSkill = idSkill;
     p ->info.namaSkill = namaSkill;
     p ->info.damage = damage;
     p ->info.staminaCost = staminaCost;
@@ -49,15 +50,15 @@ adrNode createNode(string namaSkill, int damage, int staminaCost){
 void insertNode(adrNode &root, adrNode p){
     if (root == nullptr){
         root = p;
-    }else if (p->info.staminaCost < root->info.staminaCost){
+    }else if (p->info.idSkill < root->info.idSkill){
         insertNode(root->left, p);
-    }else if (p->info.staminaCost > root->info.staminaCost){
+    }else if (p->info.idSkill > root->info.idSkill){
         insertNode(root->right, p);
     }
 }
 
-void insertSkill(adrNode &root, string namaSkill, int damage, int staminaCost){
-    insertNode(root, createNode(namaSkill, damage, staminaCost));
+void insertSkill(adrNode &root, int idSkill, string namaSkill, int damage, int staminaCost){
+    insertNode(root, createNode(idSkill, namaSkill, damage, staminaCost));
 }
 
 adrNode pilihRoleTree(int choice){
@@ -80,41 +81,41 @@ adrNode pilihRoleTree(int choice){
 adrNode buildWarriorTree(){
     adrNode root = nullptr;
 
-    insertSkill(root, "Slash", 20, 10);
-    insertSkill(root, "Iron_Skin", 0, 5);
-    insertSkill(root, "Bash", 30, 15);
-    insertSkill(root, "Power_Strike", 40, 20);
-    insertSkill(root, "Shield_Bash", 0, 8);
-    insertSkill(root, "Whirlwind", 50, 25);
-    insertSkill(root, "Earthquake", 60, 30);
-    insertSkill(root, "Curse Strike", 10, 12);
+    insertSkill(root, 9, "Slash", 20, 10);
+    insertSkill(root, 7, "Iron_Skin", 0, 5);
+    insertSkill(root, 3, "Bash", 30, 15);
+    insertSkill(root, 2, "Power_Strike", 40, 20);
+    insertSkill(root, 5, "Shield_Bash", 0, 8);
+    insertSkill(root, 6, "Whirlwind", 50, 25);
+    insertSkill(root, 4, "Earthquake", 60, 30);
+    insertSkill(root, 10, "Curse Strike", 10, 12);
 
     return root;
 }
 
 adrNode buildArcherTree(){
     adrNode root = nullptr;
-    insertSkill(root, "Quick_Shot", 15, 5);
-    insertSkill(root, "Piercing_Arrow", 25, 10);
-    insertSkill(root, "Multi_Shot", 35, 15);
-    insertSkill(root, "Eagle_Eye", 0, 8);
-    insertSkill(root, "Rapid_Fire", 40, 20);
-    insertSkill(root, "Poison_Arrow", 10, 12);
-    insertSkill(root, "Rain_of_Arrows", 50, 25);
-    insertSkill(root, "Snipe", 60, 30);
+    insertSkill(root, 7, "Quick_Shot", 15, 5);
+    insertSkill(root, 2, "Piercing_Arrow", 25, 10);
+    insertSkill(root, 10, "Multi_Shot", 35, 15);
+    insertSkill(root, 4, "Eagle_Eye", 0, 8);
+    insertSkill(root, 6, "Rapid_Fire", 40, 20);
+    insertSkill(root, 14, "Poison_Arrow", 10, 12);
+    insertSkill(root, 20, "Rain_of_Arrows", 50, 25);
+    insertSkill(root, 8, "Snipe", 60, 30);
     return root;
 }
 
 adrNode buildMageTree(){
     adrNode root = nullptr;
-    insertSkill(root, "Fireball", 25, 10);
-    insertSkill(root, "Ice_Spike", 20, 8);
-    insertSkill(root, "Lightning_Bolt", 35, 15);
-    insertSkill(root, "Mana_Shield", 0, 5);
-    insertSkill(root, "Meteor", 50, 25);
-    insertSkill(root, "Frost_Nova", 15, 12);
-    insertSkill(root, "Arcane_Blast", 40, 20);
-    insertSkill(root, "Curse", 10, 18);
+    insertSkill(root, 8, "Fireball", 25, 10);
+    insertSkill(root, 2, "Ice_Spike", 20, 8);
+    insertSkill(root, 1, "Lightning_Bolt", 35, 15);
+    insertSkill(root, 12, "Mana_Shield", 0, 5);
+    insertSkill(root, 5, "Meteor", 50, 25);
+    insertSkill(root, 7, "Frost_Nova", 15, 12);
+    insertSkill(root, 6, "Arcane_Blast", 40, 20);
+    insertSkill(root, 13, "Curse", 10, 18);
     return root;
 }
 
@@ -143,4 +144,12 @@ adrNode searchSkill(adrNode root, string namaSkill){
     return searchSkill(root->right, namaSkill);
 }
 
-
+void postOrder(adrNode root){
+    if (root != nullptr){
+        postOrder(root->left);
+        postOrder(root->right);
+        cout << root->info.idSkill;
+        cout << root->info.namaSkill;
+        cout << " | ";
+    }
+}
