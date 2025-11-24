@@ -6,6 +6,7 @@ using namespace std;
 typedef struct skillNode *adrNode;
 
 struct skill{
+    int idSkill;
     string namaSkill;
     int staminaCost;
     int damage;
@@ -19,18 +20,15 @@ struct skillNode {
 
 void displayPilihRole();
 void createTree(adrNode &root);
-adrNode createNode(string namaSkill, int damage, int staminaCost);
+adrNode createNode(int idSkill, string namaSkill, int damage, int staminaCost);
 void insertNode(adrNode &root, adrNode p);
 adrNode pilihRoleTree(int choice);
-void insertSkill(adrNode &root, string namaSkill, int damage, int staminaCost);
+void insertSkill(adrNode &root, int idSkill, string namaSkill, int damage, int staminaCost);
 adrNode buildWarriorTree();
 adrNode buildArcherTree();
 adrNode buildMageTree();
 void displaySkill(adrNode root);
 adrNode searchSkill(adrNode root, string namaSkill);
-
+void postOrder(adrNode root);
 
 #endif // TURNBASE_H_INCLUDED
-
-
-
