@@ -10,6 +10,7 @@ struct skill{
     string namaSkill;
     int staminaCost;
     int damage;
+    int mana;
 };
 
 struct skillNode {
@@ -18,17 +19,29 @@ struct skillNode {
     adrNode right;
 };
 
+struct Atribut{
+    int maxHp;
+    int maxStamina;
+    int maxMana;
+};
+
+Atribut warriorAtribut();
+Atribut mageAtribut();
+Atribut archerAtribut();
+void karakter(Atribut player);
+
 void displayPilihRole();
 void createTree(adrNode &root);
-adrNode createNode(int idSkill, string namaSkill, int damage, int staminaCost);
+adrNode createNode(int idSkill, string namaSkill, int damage, int staminaCost, int mana);
 void insertNode(adrNode &root, adrNode p);
 adrNode pilihRoleTree(int choice);
-void insertSkill(adrNode &root, int idSkill, string namaSkill, int damage, int staminaCost);
+void insertSkill(adrNode &root, int idSkill, string namaSkill, int damage, int staminaCost, int mana);
 adrNode buildWarriorTree();
 adrNode buildArcherTree();
 adrNode buildMageTree();
 void displaySkill(adrNode root);
 adrNode searchSkill(adrNode root, string namaSkill);
 void postOrder(adrNode root);
+
 
 #endif // TURNBASE_H_INCLUDED
