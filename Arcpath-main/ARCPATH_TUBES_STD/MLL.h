@@ -49,6 +49,39 @@ struct StageNode {
 /* -------------------------
    MLL management functions (declarations)
    ------------------------- */
+
+/* ---------------------------
+   Helper functions for gameplay
+   --------------------------- */
+
+// find first alive enemy in enemy list
+EnemyNode* firstAliveEnemy(EnemyNode* head);
+
+// check if all enemies dead
+bool allEnemiesDead(EnemyNode* head);
+
+// apply damage to a single enemy node
+void damageEnemy(EnemyNode* e, int dmg);
+
+// enemies attack player; defense reduces flat damage
+void enemiesAttack(EnemyNode* head, int &playerHp, int defense);
+
+// print player and enemies
+void printBattleStatus(int hp, int maxHp, int stamina, int maxStamina, int defense, StageNode* stage);
+
+// copy skills from RoleNode into an indexed array for convenient choice
+int copySkillsToArray(RoleNode* role, SkillNode* arr[], int maxArr);
+
+/* ---------------------------
+   Admin menu for CRUD operations
+   --------------------------- */
+void adminMenu(RoleNode* roles);
+
+/* ---------------------------
+   The battle loop per playthrough
+   --------------------------- */
+void playGame(RoleNode* rolesHead);
+
 /* Role / Skill MLL */
 RoleNode* createRoleList();                // create default roles parent list (Warrior, Archer, Mage)
 void freeRoleList(RoleNode* head);         // free roles and their skill child lists
@@ -77,12 +110,6 @@ void printAllRoles(RoleNode* head);
 void printStageEnemies(StageNode* stage);
 
 bool loginAdmin();
+void menu(RoleNode* roles);
 
 #endif
-
-
-
-
-
-
-
