@@ -186,10 +186,10 @@ void playGame(RoleNode* rolesHead) {
                                 if (target->hp == 0) cout << target->name << " defeated!\n";
                             }
                         } else if (sk->type == 1) {
-                            // buff defense: use value as flat defense and lasts 3 turns
+                            // buff defense: use value as flat defense and lasts 2 turns
                             defense += sk->value;
-                            buffTurns = 3;
-                            cout << "You use " << sk->name << ". Defense +" << sk->value << " for 3 turns.\n";
+                            buffTurns = 2;
+                            cout << "You use " << sk->name << ". Defense +" << sk->value << " for 2 turns.\n";
                         } else if (sk->type == 2) {
                             // AOE: damage all enemies
                             cout << "You use " << sk->name << " (AOE) dealing " << sk->value << " to all enemies.\n";
