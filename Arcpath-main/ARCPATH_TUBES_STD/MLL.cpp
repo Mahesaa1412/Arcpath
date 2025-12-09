@@ -143,7 +143,7 @@ void playGame(RoleNode* rolesHead) {
             printBattleStatus(hp, maxHp, stamina, maxStamina, defense, curStage);
 
             cout << "\nActions:\n1. Basic Attack (cost 1 STA, dmg 10 to first alive enemy)\n2. Use Skill\n3. Rest (HP +5, Stamina +8)\nChoose: ";
-            int act; 
+            int act;
             cin >> act;
 
             if (act == 1) {
@@ -220,28 +220,29 @@ void playGame(RoleNode* rolesHead) {
                 stamina += restSta; if (stamina > maxStamina) stamina = maxStamina;
                 cout << "You rest: HP +" << heal << ", Stamina +" << restSta << ".\n";
             }
-            else {
+            else if (act > 3) {
                 cout << "Invalid action.\n";
             }
 
-            // if all enemies died after player action => skip enemy turn
-            if (allEnemiesDead(curStage->enemyHead)) break;
+            if (act <= 3){
+                // if all enemies died after player action => skip enemy turn
+                if (allEnemiesDead(curStage->enemyHead)) break;
 
-            // enemies' turn
-            cout << "\n-- Enemies' Turn --\n";
-            enemiesAttack(curStage->enemyHead, hp, defense);
-            if (hp <= 0) { cout << "You have been defeated.\n"; break; }
+                // enemies' turn
+                cout << "\n-- Enemies' Turn --\n";
+                enemiesAttack(curStage->enemyHead, hp, defense);
+                if (hp <= 0) { cout << "You have been defeated.\n"; break; }
 
-            // reduce buff turns
-            if (buffTurns > 0) {
-                buffTurns--;
-                if (buffTurns == 0) {
-                    cout << "Your defense buff expired.\n";
-                    defense = 0;
+                // reduce buff turns
+                if (buffTurns > 0) {
+                    buffTurns--;
+                    if (buffTurns == 0) {
+                        cout << "Your defense buff expired.\n";
+                        defense = 0;
+                    }
                 }
+                turn++;
             }
-
-            turn++;
         } // end battle loop for stage
 
         if (hp <= 0) {
