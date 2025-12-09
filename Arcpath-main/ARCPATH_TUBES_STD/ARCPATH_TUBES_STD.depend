@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1765280922 source:d:\arcpath_tubes_std\main.cpp
+	<iostream>
+	<string>
+	"mll.h"
+
+1765280922 d:\arcpath_tubes_std\mll.h
+	<iostream>
+	<string>
+
+1765280922 source:d:\arcpath_tubes_std\mll.cpp
+	"mll.h"
+
+1765285013 source:d:\project\arcpath-main\arcpath_tubes_std\main.cpp
+	<iostream>
+	<string>
+	"mll.h"
+
+1765284796 d:\project\arcpath-main\arcpath_tubes_std\mll.h
+	<iostream>
+	<string>
+
+1765284384 source:d:\project\arcpath-main\arcpath_tubes_std\mll.cpp
+	"mll.h"
+
