@@ -1,82 +1,60 @@
-# ARCPATH
-# Turn-Based RPG CLI Game
 
-**C++ | Tree + Multi-Linked List (MLL)**
+# ARCPATH — Turn-Based CLI Game (C++ / Multi-Linked List)
 
-Game RPG berbasis CLI yang mengimplementasikan **struktur data Tree** untuk Skill Tree dan **Multi-Linked List (1-N)** untuk Inventory System. Pemain memilih role (Warrior, Archer, Mage), lalu dapat melihat skill tree unik masing-masing, mencari skill, dan mengakses inventory.
+Arcpath adalah game turn-based berbasis Command Line Interface (CLI) yang dibangun menggunakan bahasa C++. Proyek ini mengimplementasikan Multi-Linked List (MLL) sebagai struktur data utama untuk mengelola role, skill, stage, dan enemy.
 
----
+Game sederhana ini dirancang sebagai tugas besar untuk mendemonstrasikan MLL dalam bentuk aplikasi interaktif: pemain memilih role, menggunakan skill, melawan musuh per stage, sementara admin dapat mengelola skill dengan CRUD.
 
-## Project Description
+## > Tujuan Proyek
 
-**Arcpath** adalah proyek game berbasis Command Line Interface yang dibangun menggunakan C++. Proyek ini dirancang untuk mendemonstrasikan implementasi struktur data **Tree (Left Child–Right Sibling)** dan **Multi Linked List (1-N)** melalui sistem skill tree dan inventory.
+- Mengimplementasikan Multi-Linked List dalam konteks nyata
 
-Game ini memberikan pengalaman bermain sederhana namun interaktif, di mana pemain dapat memilih role, melihat skill tree, mencari skill, dan mengelola inventory.
+- Melatih penggunaan pointer & dynamic memory C++
 
----
+- Mendesain game CLI dengan sistem CRUD
 
-## Fitur
-
-### Skill Tree System (Tree)
-
-* Setiap role memiliki skill tree sendiri.
-* Representasi Tree menggunakan **Left Child – Right Sibling**.
-* Setiap skill mempunyai:
-
-  * `namaSkill`
-  * `damage`
-  * `staminaCost`
-* Pencarian skill menggunakan DFS rekursif.
-
-### Inventory System (MLL)
-
-* Inventory disusun menggunakan Multi Linked List (1-N).
-* Isi berupa berbagai jenis potion (Small, Medium, Elixir).
-* Menampilkan dan menambah item ke inventory.
-
-### Role System
-
-* **Warrior** – keseimbangan kekuatan.
-* **Archer** – jarak jauh dengan skill bertingkat.
-* **Mage** – magic damage besar.
-
----
-
-## Tech Stack
-
-* C++
-* Tree (Left Child – Right Sibling)
-* Multi Linked List (1-N)
-* Recursive Search
-* CLI Interface
-
----
-
-## 📂 Project Structure
+- Simulasi gameplay turn-based berbasis MLL
+## > Sistem & Fitur Arcpath
 
 ```
-📁 src/
- ├── skilltree.h
- ├── skilltree.cpp
- ├── inventory.h
- ├── inventory.cpp
+📁 ARCPATH_TUBES_STD/
+ ├── MLL.h
+ ├── MLL.cpp
  ├── main.cpp
 ```
 
----
+### 1. Struktur MLL
 
-## 🖼️ Skill Tree Example (Warrior)
+Proyek ini menggunakan struktur MLL:
+- Role -> Skill List
+- Stage -> Enemy List
 
-```
-Slash (DMG: 10 | ST: 5)
-  ├── Heavy Slash (DMG: 20 | ST: 10)
-  └── Whirlwind   (DMG: 35 | ST: 18)
-```
+### 2. Sistem Role
+Tersedia 3 role default:
+- Warrior
+- Archer
+- Mage
 
----
+### 3. Sistem Stage & Enemy
+Terdapat 10 stage:
+- Stage 5 dan 10 berisi boss
+- Setiap stage memiliki list musuh sendiri (MLL)
+- Player harus mengalahkan semua musuh sebelum lanjut ke stage berikutnya
 
-## Authors
+### 4. Gameplay
+- Pemain dapat melakukan: Basic Attack, Use Skill, Rest
+- Setelah player menyerang, musuh akan melakukan counter attack
+
+### 5. Admin Panel
+Admin dapat mengimplementasikan CRUD:
+- Login sebagai admin
+- Melihat skill sebuah role
+- Menambah skill
+- Mengupdate skill
+- Menghapus skill
+
+## > Authors 
 Project ini dibuat secara berkelompok oleh 2 anggota yang berkontribusi:
 
-- [@nisissy](https://github.com/nississy) - Anisah Pulungan
-- [@Mahesaa1412](https://github.com/Mahesaa1412) - Dimas Tri Mahesa
+- [@nisissy](https://github.com/nississy)
+- [@Mahesaa1412](https://github.com/Mahesaa1412)
