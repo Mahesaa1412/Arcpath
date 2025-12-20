@@ -419,19 +419,23 @@ void adminMenu(RoleNode* roles) {
                     cout << "Choose skill index to update: ";
                     int sidx;
                     cin >> sidx;
-                    string nm, tp;
-                    int val, st;
-                    cout << "New name: ";
-                    cin >> nm;
-                    cout << "New value: ";
-                    cin >> val;
-                    cout << "New stamina cost: ";
-                    cin >> st;
-                    cout << "New type: ";
-                    cin >> tp;
-                    updateSkillInRole(r, sidx, nm, val, st, tp);
-                    cout << endl;
-                    cout << BGREEN << "Skill updated!\n" << RESET;
+                    if (sidx > countSkills(roles)) {
+                        cout << BRED << "Invalid input!\n" << RESET;
+                    } else {
+                        string nm, tp;
+                        int val, st;
+                        cout << "New name: ";
+                        cin >> nm;  
+                        cout << "New value: ";
+                        cin >> val;
+                        cout << "New stamina cost: ";
+                        cin >> st;
+                        cout << "New type: ";
+                        cin >> tp;
+                        updateSkillInRole(r, sidx, nm, val, st, tp);
+                        cout << endl;
+                        cout << BGREEN << "Skill updated!\n" << RESET;
+                    }
                 }
                 break;
             }
@@ -784,5 +788,6 @@ bool loginAdmin() {
     cout << endl;
     return false;
 }
+
 
 
