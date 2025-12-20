@@ -693,7 +693,7 @@ StageNode* buildDefaultStages() {
     addEnemyToStage(st1->next->next->next->next->next->next->next->next, "Spider", 30, 10);
 
     // Stage 10 - boss multi
-    addEnemyToStage(st1->next->next->next->next->next->next->next->next->next, "Ancient Dragon (BOSS)", 300, 25);
+    addEnemyToStage(st1->next->next->next->next->next->next->next->next->next, "Ancient Dragon (BOSS)", 250, 23);
 
     return head;
 }
@@ -788,6 +788,7 @@ bool loginAdmin() {
     cout << endl;
     return false;
 }
+
 
 
 
