@@ -332,18 +332,20 @@ void playGame(RoleNode* rolesHead) {
             return;
         }
 
-        // Stage cleared: reward regen
-        int hpGain = 30 + s;
-        int staGain = 15 + (s / 2);
-        hp += hpGain; if (hp > maxHp) hp = maxHp;
-        stamina += staGain;
-        if (stamina > maxStamina) {
-            stamina = maxStamina;
+        if (s != 10) {
+            // Stage cleared: reward regen
+            int hpGain = 30 + s;
+            int staGain = 15 + (s / 2);
+            hp += hpGain; if (hp > maxHp) hp = maxHp;
+            stamina += staGain;
+            if (stamina > maxStamina) {
+                stamina = maxStamina;
+            }
+            cout << BYELLOW << "\nSTAGE " << s << BLINK << " CLEARED!" << RESET << " HP " << BGREEN << "+" << hpGain << RESET << ", Stamina " << BGREEN << "+" << staGain << RESET << "\n";
         }
-        cout << "\nSTAGE " << s << " CLEARED! HP +" << hpGain << ", Stamina +" << staGain << ".\n";
     } // end stages
 
-    cout << "\nCONGRATULATIONS! You cleared all stages!\n";
+    cout << BLINK << BGREEN << "\nCONGRATULATIONS!" << RESET << " You cleared all stages!\n";
     freeStages(stages);
 }
 
@@ -788,6 +790,7 @@ bool loginAdmin() {
     cout << endl;
     return false;
 }
+
 
 
 
